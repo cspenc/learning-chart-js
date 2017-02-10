@@ -5,11 +5,23 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Shapeways</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style>
+          body {
+            padding-left: 20px;
+          }
+          .dataTable {
+            width: 500px;
+          }
+          .chartjs {
+            width: 350px;
+          }
+        </style>
     </head>
     <body>
       <h1>Consumer Complaints Database</h1>
-        <div style="width: 400px;">
-          <canvas id="consumerData" height="400" width="400"></canvas>
+      <br>
+        <div class="chartjs">
+          <canvas id="consumerData" height="350" width="350"></canvas>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
         <script>
@@ -42,5 +54,49 @@
             data: data
         });
         </script>
+        <br><br>
+        <div>
+          <table class="table table-hover dataTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Lending Organization</th>
+                <th>Number of Complaints</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Bank of America</td>
+                <td>63,428</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Wells Fargo & Company</td>
+                <td>50,958</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Equifax</td>
+                <td>44,411</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Experian</td>
+                <td>41,816</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>JPMorgan Chase & Co.</td>
+                <td>40,551</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <div>
+          <p>This data is from the following date range: 1/1/2012 - 12/31/2016</p>
+          <p>Data was provided from <a href="http://data.gov/">Data.gov</a></p>
+        </div>
     </body>
 </html>
